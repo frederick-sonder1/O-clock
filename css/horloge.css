@@ -1,0 +1,83 @@
+/* /////////////////////////////////////////////// */
+/* /////////////////////////////////////////////// */
+/*----------------------Horloge--------------------*/
+/* /////////////////////////////////////////////// */
+/* /////////////////////////////////////////////// */
+.horloge2{
+    background: linear-gradient(0deg, #dddddd, #0000ff, #272727);
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    margin: 100px auto;
+}
+.horloge{
+    position: relative;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    border: 1px solid #dddddd;
+    border-radius: 50%;
+    background-image: url(../image/horloge2.svg);
+    background-size: cover;
+
+
+}
+.needle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    border-radius: 2px;
+}
+.hr{
+    width: 4px;
+    height: 30%;
+    background-color: rgb(16, 81, 222);
+}
+.min{
+    width: 4px;
+    height: 40%;
+    background-color: rgb(34, 24, 178);
+}
+.sec{
+    width: 1px;
+    height: 45%;
+    background-color: red;
+}
+
+/* /////////////////////////////////////////////// */
+/* /////////////////////////////////////////////// */
+/*----------------- border horloge ---------------*/
+/* /////////////////////////////////////////////// */
+/* /////////////////////////////////////////////// */
+
+.horloge:before, .horloge:after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: linear-gradient(45deg,#fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+    #0000ff, #00ff00,#ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+    border-radius: 50%;
+}
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.horloge:after {
+	filter: blur(50px);
+}
+

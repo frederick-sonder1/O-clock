@@ -1,0 +1,84 @@
+/* /////////////////////////////////////////////// */
+/* /////////////////////////////////////////////// */
+/*------------------------timer--------------------*/
+/* /////////////////////////////////////////////// */
+/* /////////////////////////////////////////////// */
+.timer{
+
+    display: flex;
+    align-items: center;
+}
+.timer__part{
+    font-size: 75px;
+    font-weight: bold;
+}
+.timer__btn{
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+    border-radius: 50%;
+    border:none;
+    color: white;
+    background-color: #00a8ff;
+    cursor: pointer;
+}
+
+.timer__btn--start{
+    background-color: #00b84c;
+}
+.timer__btn--stop{
+    background-color: #ff0256;
+}
+
+
+
+/* /////////////////////////////////////////////// */
+/* /////////////////////////////////////////////// */
+/*---------------------border timer ---------------*/
+/* /////////////////////////////////////////////// */
+/* /////////////////////////////////////////////// */
+
+
+.timer{
+    background: linear-gradient(0deg, #dddddd, #272727);
+    position: relative;
+    margin: 100px auto;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.timer:before, .timer:after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: linear-gradient(
+        45deg, 
+        #0000ff, #1111ff, #2222ff,
+        #3333ff, #4444ff,#5555ff, #6666ff, 
+        #7777ff, #6666ff, #5555ff, #4444ff, 
+        #3333ff, #2222ff,#1111ff, #0000ff);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+}
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 200% 0;
+	}
+	100% {
+		background-position: 400% 0;
+	}
+}
+
+.timer:after {
+	filter: blur(50px);
+}
+

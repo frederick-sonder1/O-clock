@@ -1,0 +1,126 @@
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.watch{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.outer-circle{
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.animation-bg{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab,yellow ,white);
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.inner-circle{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.text{
+    color: white;
+    font-size: 20px;    
+}
+.minute{
+    font-size: 50px;
+}
+.sec{
+    font-size: 42px;
+}
+.msec{
+    font-size: 27px;
+}
+.button-wrapper{
+    width: 250px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+   
+}
+.button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: #000000;
+    color: #ffffff;
+}
+.laps{
+    list-style: none;
+    color: #ffffff;
+    height:300px;
+    width: 300px;
+    height: 300px;
+    overflow: auto;
+    position: relative;
+    padding: 15px 0;
+}
+.laps::-webkit-scrollbar{
+    display: none;
+}
+.lap-item{
+    display: inline-block;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #444444;
+    border-radius: 50px;
+    margin-bottom: 10px;
+
+}
+.number{
+    color: #cccccc;
+}
+.time-stamp{
+    display: inline-block;
+    margin-left: 10px;
+}
+.lap-clearbutton{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 12px;
+}
+.hidden{
+    visibility: hidden;
+}
